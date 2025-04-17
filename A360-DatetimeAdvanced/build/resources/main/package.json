@@ -1,0 +1,141 @@
+{
+    "name": "A360DatetimeAdvanced",
+    "label": "Datetime Advanced",
+    "description": "Extends Datetime package with additional commands",
+    "group": "com.automationanywhere",
+    "artifactName": "A360DatetimeAdvanced",
+    "packageVersion": "1.0.2-20230508-230143",
+    "codeVersion": "1.0.2-20230508-230143",
+    "author": "",
+    "commands": [
+        {
+            "name": "DatetimeAdvancedDayOfWeek",
+            "label": "Get Day Of Week",
+            "description": "Provides with a string - day of week",
+            "nodeLabel": "Get Day Of Week",
+            "allowedAgentTargets": [
+                "WINDOWS"
+            ],
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.DayOfWeekCommand",
+            "icon": "DateTime.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Assign the output to variable",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "inputDate",
+                    "label": "Source start date and time variable",
+                    "type": "DATETIME",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "DatetimeAdvancedDifference",
+            "label": "Difference",
+            "description": "Calculate Datetime difference from 2 dates",
+            "nodeLabel": "Difference",
+            "allowedAgentTargets": [
+                "WINDOWS"
+            ],
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.DifferenceCommand",
+            "icon": "DateTime.svg",
+            "returnType": "NUMBER",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Assign the output to variable",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "startTime",
+                    "label": "Source start date and time variable",
+                    "type": "DATETIME",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "endTime",
+                    "label": "Source end date and time variable",
+                    "type": "DATETIME",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "timeUnit",
+                    "label": "Select time unit",
+                    "type": "SELECT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "Second",
+                            "value": "Second"
+                        },
+                        {
+                            "label": "Minute",
+                            "value": "Minute"
+                        },
+                        {
+                            "label": "Hour",
+                            "value": "Hour"
+                        },
+                        {
+                            "label": "Day",
+                            "value": "Day"
+                        },
+                        {
+                            "label": "Month",
+                            "value": "Month"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "DatetimeAdvancedFirstDayOfNextMonth",
+            "label": "Get First Day Of Next Month",
+            "description": "Provides with datetime variable with first day of next month",
+            "nodeLabel": "Get First Day Of Next Month",
+            "allowedAgentTargets": [
+                "WINDOWS"
+            ],
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.FirstDayOfNextMonthCommand",
+            "icon": "DateTime.svg",
+            "returnType": "DATETIME",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Assign the output to variable",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "inputDate",
+                    "label": "Source start date and time variable",
+                    "type": "DATETIME",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

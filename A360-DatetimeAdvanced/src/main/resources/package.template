@@ -1,0 +1,11 @@
+{
+  "name": "A360DatetimeAdvanced",
+  "label": "Datetime Advanced",
+  "description": "Extends Datetime package with additional commands",
+  "group": "",
+  "artifactName": "",
+  "packageVersion": "",
+  "codeVersion": "",
+  "author": "ISS RPA Team",
+  "commands": []
+}
